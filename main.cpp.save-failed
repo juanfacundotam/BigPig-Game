@@ -1,0 +1,240 @@
+//Nombre: JUAN FACUNDO TAM
+//TP: Integrador
+//EJ: Gran Cerdo
+//Comentarios:
+#include<iostream>
+#include<stdio.h>
+#include<clocale>
+#include<stdlib.h>
+#include<time.h>
+#include<windows.h>
+
+
+using namespace std;
+
+//Funciones
+void menu(int &opcion);
+void juego();
+// funcion estadisticas
+// funcion creditos
+int dadosDos(int dado1, int dado2);
+// Funcion dados3
+int tirar();
+//srand
+
+
+//**************************************************************************
+
+
+
+//MAIN
+int main()
+{
+    setlocale(LC_ALL, "Spanish");
+
+    int opcion_menu;
+
+    //Menu
+
+    Beep(300, 300);
+    menu(opcion_menu);
+    system("color 47");
+    Beep(400, 100);
+    system("color 67");
+    Beep(500, 100);
+    system("color 57");
+    Beep(600, 100);
+    //OPCIONES
+    while(opcion_menu != 0){
+
+        switch(opcion_menu){
+            case 1:
+                juego();
+            break;
+            case 2:
+                //funcion Estadisticas
+            break;
+            case 3:
+                //funcion creditos
+            break;
+            case 0:
+                // salir
+            break;
+            default:
+                cout << "La opción ingresada es incorrecta" << endl;
+            break;
+
+        }
+
+    Sleep(3000);
+
+    system("cls");
+
+
+
+    menu(opcion_menu);
+    }
+
+
+    //OPCION SALIR
+    system("cls");
+    system("color 07");
+    cout << "¡<<<<<Hasta la próxima>>>>>!" << endl;
+    cout << "¡<<<<<<<Volve pronto>>>>>>>!" << endl;
+    Beep(900, 100);
+    Beep(1000, 100);
+    Beep(1100, 100);
+    Beep(1200, 100);
+    return 0;
+
+}
+
+
+
+
+
+
+//********************************************************************************
+
+
+
+
+
+
+//DEFINICION DE FUNCIONES
+
+///MENU =====================
+void menu(int &opcion)
+{
+    system("color 87");
+    cout << "GRAN CERDO" << endl;
+    cout << "------------------" << endl;
+    cout << "1 - JUGAR" << endl;
+    cout << "2 - ESTADÍSTICAS" << endl;
+    cout << "3 - CRÉDITOS" << endl;
+    cout << "------------------" << endl;
+    cout << "0 - SALIR" << endl;
+    cout << "------------------" << endl;
+
+    cout << "Opción: ";
+    cin >> opcion;
+}
+
+///JUEGO ================
+void juego()
+{
+    string nombre1, nombre2;
+    int dadoInicio1, dadoInicio2;
+    int continuar, dado, dado2;
+
+    cout <<"****¡Vienvenidos al Gran Cerdo!****" << endl;
+    cout << endl << "Ingrese los nombres de los jugadores" << endl;
+    cout << "Nombre Jugador 1: ";
+    cin >> nombre1;
+
+
+    cout << "Nombre Jugador 2: ";
+    cin >> nombre2;
+
+    Beep(500, 100);
+    Beep(800, 100);
+    Beep(700, 100);
+    Beep(1000, 100);
+
+    system("cls");
+
+    cout << ">>¡Veamos quien comienza<<" << endl;
+    cout << "--------------------------" << endl;
+    cout << "JUGADOR 1   >>>   Presione T para arrojar sus dados" << endl;
+    cin >> continuar;
+
+
+    HANDLE hCon;
+    hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+    COORD dwPos;
+    dwPos.X = 0;
+    dwPos.Y = 4;
+    SetConsoleCursorPosition(hCon, dwPos);
+
+    dadoInicio1 = tirar();
+
+
+    dadoInicio2 = tirar();
+
+
+
+
+
+
+
+    cout << dadoInicio1 << endl;
+
+
+
+}
+
+int dadosDos(int dado1, int dado2)
+{
+
+}
+
+
+//TIRAR =======================
+int tirar()
+{
+
+    srand(time(NULL));
+    int dado = (rand() % 6) + 1;
+
+    switch(dado){
+    case 1:
+        //posición
+
+        cout << "+-------+" << endl;
+        cout << "|       |" << endl;
+        cout << "|   x   |" << endl;
+        cout << "|       |" << endl;
+        cout << "+-------+" << endl;
+        break;
+
+
+    case 2:
+        cout << "+-------+" << endl;
+        cout << "| x     |" << endl;
+        cout << "|       |" << endl;
+        cout << "|     x |" << endl;
+        cout << "+-------+" << endl;
+        break;
+    case 3:
+        cout << "+-------+" << endl;
+        cout << "| x     |" << endl;
+        cout << "|   x   |" << endl;
+        cout << "|     x |" << endl;
+        cout << "+-------+" << endl;
+        break;
+    case 4:
+        cout << "+-------+" << endl;
+        cout << "| x   x |" << endl;
+        cout << "|       |" << endl;
+        cout << "| x   x |" << endl;
+        cout << "+-------+" << endl;
+        break;
+    case 5:
+        cout << "+-------+" << endl;
+        cout << "| x   x |" << endl;
+        cout << "|   x   |" << endl;
+        cout << "| x   x |" << endl;
+        cout << "+-------+" << endl;
+        break;
+    case 6:
+        cout << "+-------+" << endl;
+        cout << "| x   x |" << endl;
+        cout << "| x   x |" << endl;
+        cout << "| x   x |" << endl;
+        cout << "+-------+" << endl;
+        break;
+    }
+
+    return dado;
+}
+

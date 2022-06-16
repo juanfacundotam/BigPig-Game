@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1654892814 source:c:\users\facundo\desktop\tecnicatura\1er cuatrimestre\5 laboratorio de computación\trabajo interador final\big pig\main.cpp
+	<iostream>
+	<stdio.h>
+	<clocale>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	<string>
+	<conio.h>
+	"funciones.h"
+
+1654892814 c:\users\facundo\desktop\tecnicatura\1er cuatrimestre\5 laboratorio de computación\trabajo interador final\big pig\funciones.h
+
+1654899326 source:c:\users\facundo\desktop\tecnicatura\1er cuatrimestre\5 laboratorio de computación\trabajo interador final\big pig\funciones.cpp
+	<iostream>
+	<stdio.h>
+	<clocale>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	<string>
+	<conio.h>
+	"funciones.h"
+
