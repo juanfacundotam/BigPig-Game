@@ -28,19 +28,19 @@ void menu(char &opcion)
         cout << "GRAN CERDO" << endl;
         cout << "------------------" << endl;
         cout << "1 - JUGAR" << endl;
-        cout << "2 - ESTADÍSTICAS" << endl;
-        cout << "3 - CRÉDITOS" << endl;
+        cout << "2 - ESTADÃSTICAS" << endl;
+        cout << "3 - CRÃ‰DITOS" << endl;
         cout << "4 - REGLAS" << endl;
         cout << "------------------" << endl;
         cout << "0 - SALIR" << endl;
         cout << "------------------" << endl;
 
-        cout << "Opción: ";
+        cout << "OpciÃ³n: ";
         cin >> opcion;
 
         if(opcion == '0'){
             do{
-                cout << endl << "¿Deseas salir del juego? (S/N)" << endl;
+                cout << endl << "Â¿Deseas salir del juego? (S/N)" << endl;
                 cin >> confirmacion_salida;
                 confirmacion_salida = toupper(confirmacion_salida);
             }while(confirmacion_salida != 'S' && confirmacion_salida != 'N');
@@ -77,7 +77,7 @@ void inicio(string &primero, string &segundo)
     Beep(700, 150);
     system("cls");
     cin.ignore();
-    cout <<"****¡Vienvenidos al Gran Cerdo!****" << endl;
+    cout <<"****Â¡Vienvenidos al Gran Cerdo!****" << endl;
     cout << endl << "Ingrese los nombres de los jugadores" << endl;
 
     cout << "Nombre Jugador 1: ";
@@ -99,7 +99,7 @@ void inicio(string &primero, string &segundo)
 
         system("cls");
 
-        cout << ">>¡Veamos quien comienza<<" << endl;
+        cout << ">>Â¡Veamos quien comienza<<" << endl;
         cout << "--------------------------" << endl;
 
         //jugador 1
@@ -159,7 +159,7 @@ void inicio(string &primero, string &segundo)
 
                 }
                 else{
-                    cout << "¡TREMENDO EMPATE! ¡VUELVAN A TIRAR!" << endl;
+                    cout << "Â¡TREMENDO EMPATE! Â¡VUELVAN A TIRAR!" << endl;
                 }
             }
 
@@ -168,7 +168,7 @@ void inicio(string &primero, string &segundo)
 
     cout << endl;
     cout << "******************************************" << endl;
-    cout << "COMENZARÁ POR MAYOR PUNTAJE: " << primero << endl;
+    cout << "COMENZARÃ POR MAYOR PUNTAJE: " << primero << endl;
     cout << "******************************************" << endl;
     Beep(600, 50);
     Beep(600, 50);
@@ -317,12 +317,12 @@ void juego(string player1, string player2, string &ganador, int &puntaje) //+ do
 
                 if(dado1 != dado2 && dado1 != dado3 && dado3 != dado2 && dado1 != 1 && dado2 != 1 && dado3 != 1){
                     trufas = dado1 + dado2 + dado3;
-                    cout << "¡Sumaste " << trufas << " trufas!" << endl << endl;
+                    cout << "Â¡Sumaste " << trufas << " trufas!" << endl << endl;
                     acuTrufas += trufas;
                 }
                 else if(((dado1 == dado2 && dado1 != dado3) || (dado1 == dado3 && dado1 != dado2) || (dado2 == dado3 && dado2 != dado1)) && (dado1 > 1 && dado2 > 1 && dado3 > 1)){
                     trufas = dado1 + dado2 + dado3;
-                    cout << "¡Sumaste " << trufas << " trufas!" << endl << endl;
+                    cout << "Â¡Sumaste " << trufas << " trufas!" << endl << endl;
                     acuTrufas += trufas;
 
                 }
@@ -330,7 +330,7 @@ void juego(string player1, string player2, string &ganador, int &puntaje) //+ do
                     trufas = (dado1 + dado2) * 2;
                     cout << "-------BIEN HECHO-------" << endl;
                     cout << "-----Sacaste un Oink----" << endl << endl;
-                    cout << "¡Sumaste " << trufas << " trufas!" << endl << endl;
+                    cout << "Â¡Sumaste " << trufas << " trufas!" << endl << endl;
                     acuTrufas += trufas;
                     bandOink = true;
                 }
@@ -338,24 +338,24 @@ void juego(string player1, string player2, string &ganador, int &puntaje) //+ do
                     trufas = (dado1 + dado2 + dado3) * 3;
                     cout << "-------BIEN HECHO-------" << endl;
                     cout << "-----Sacaste un Oink----" << endl << endl;
-                    cout << "¡Sumaste " << trufas << " trufas!" << endl << endl;
+                    cout << "Â¡Sumaste " << trufas << " trufas!" << endl << endl;
                     acuTrufas += trufas;
                     bandOink = true;
                 }
 
                 else if((dado1 != dado2 && dado1 != dado2 && dado1 != dado3) && (dado1 == 1 || dado2 == 1 || dado3 == 1)){
-                    cout << "******¡Vaya, no haz tenido suerte, sacaste un UNO!*****" << endl;
-                    cout << endl << "Tu turno ha finalizado y tus trufas no serán acumuladas" << endl << endl << endl << endl;
+                    cout << "******Â¡Vaya, no haz tenido suerte, sacaste un UNO!*****" << endl;
+                    cout << endl << "Tu turno ha finalizado y tus trufas no serÃ¡n acumuladas" << endl << endl << endl << endl;
                     acuTrufas = 0;
                     system("pause");
                     break;
                 }
                 else if(dado1 == dado2 && dado1 != dado3 && dado1 == 1 && dado3 == 0){
-                    cout << "<<<<<<<<<<<<<<¡DOBLE UNO>>>>>>>>>>>>>!" << endl;
-                    cout << "¡Parece que hoy no es tu día de suerte!" << endl;
+                    cout << "<<<<<<<<<<<<<<Â¡DOBLE UNO>>>>>>>>>>>>>!" << endl;
+                    cout << "Â¡Parece que hoy no es tu dÃ­a de suerte!" << endl;
                     cout << "      EL CERDO HA CAIDO EN BARRO       " << endl;
-                    cout << "¡Perdiste todas las trufas acumuladas!" << endl;
-                    cout << "   ¡serán aumuladas a tu oponente!" << endl << endl << endl << endl;
+                    cout << "Â¡Perdiste todas las trufas acumuladas!" << endl;
+                    cout << "   Â¡serÃ¡n aumuladas a tu oponente!" << endl << endl << endl << endl;
                     bandBarro = true;
                     bandDado3 = true;
 
@@ -364,17 +364,17 @@ void juego(string player1, string player2, string &ganador, int &puntaje) //+ do
                 }
                 // dos dados con 1 y otro distinto || Un dado con 1 y dos distintos
                 else if(((dado1 == dado2 && dado1 != dado3 && dado3 > 0) || (dado1 == dado3 && dado1 != dado2)) && (dado1 == 1 || dado2 == 1 || dado3 == 1)){
-                    cout << endl << "******¡Vaya, no haz tenido suerte, sacaste un UNO!*****" << endl;
-                    cout << "Tu turno ha finalizado y tus trufas no serán acumuladas" << endl << endl << endl << endl;
+                    cout << endl << "******Â¡Vaya, no haz tenido suerte, sacaste un UNO!*****" << endl;
+                    cout << "Tu turno ha finalizado y tus trufas no serÃ¡n acumuladas" << endl << endl << endl << endl;
                     acuTrufas = 0;
                     system("pause");
                     break;
                 }
                 else if (dado1 == dado2 && dado1 == dado3 && dado1 == 1){
-                    cout << "<<<<<<<<<<<<<<¡TRIPLE UNO>>>>>>>>>>>>>!" << endl;
-                    cout << "¡Parece que hoy no es tu día de suerte!" << endl;
+                    cout << "<<<<<<<<<<<<<<Â¡TRIPLE UNO>>>>>>>>>>>>>!" << endl;
+                    cout << "Â¡Parece que hoy no es tu dÃ­a de suerte!" << endl;
                     cout << "      EL CERDO HA CAIDO EN BARRO       " << endl;
-                    cout << "¡Perdiste todas las trufas acumuladas!" << endl << endl << endl << endl;
+                    cout << "Â¡Perdiste todas las trufas acumuladas!" << endl << endl << endl << endl;
                     bandBarro = true;
                     system("pause");
                     break;
@@ -385,7 +385,7 @@ void juego(string player1, string player2, string &ganador, int &puntaje) //+ do
 
                 if(!bandOink){
                     do{
-                    cout << "¿Desea continuar tirando? (S/N) " << endl;
+                    cout << "Â¿Desea continuar tirando? (S/N) " << endl;
                     cin >> continuar;
                     continuar = toupper(continuar);
                     }while(continuar != 'S' && continuar != 'N');
@@ -468,7 +468,7 @@ void juego(string player1, string player2, string &ganador, int &puntaje) //+ do
 
     cout <<  endl;
 
-    cout << "Pasemos a computar los puntos de victoría" << endl << endl;
+    cout << "Pasemos a computar los puntos de victorÃ­a" << endl << endl;
 
     system("pause");
 
@@ -551,7 +551,7 @@ void juego(string player1, string player2, string &ganador, int &puntaje) //+ do
     cout << "HITO                        " << player1 << "                                        " << endl;
     cout << "                                                       " << player2 << endl;
     cout <<"------------------------------------------------------------------------------" << endl;
-    cout << "Más trufas en total         " << cantidad1 <<" PDV (" << totalTrufas1 << " trufas)            " << cantidad2 << " PDV (" << totalTrufas2 << " trufas)" << endl;
+    cout << "MÃ¡s trufas en total         " << cantidad1 <<" PDV (" << totalTrufas1 << " trufas)            " << cantidad2 << " PDV (" << totalTrufas2 << " trufas)" << endl;
     cout << "Cada 50 trufas              " << cont50_1 <<" PDV (" << restoTrufas1 << " trufas)            " << cont50_2 << " PDV (" << restoTrufas2 << " trufas)" << endl;
     cout << "Oinks                       " << puntosOink1 <<" PDV (" << contOink1 <<" Oinks)              "<< puntosOink2 << " PDV (" << contOink2 <<" Oinks)" << endl;
     cout << "Cerdo codicioso             " << puntosLanz1 << " PDV (" << lanz1 << " lanzamientos)       " << puntosLanz2 << " PDV (" << lanz2 << " lanzamientos)" << endl;
@@ -597,7 +597,7 @@ int dibujos(int numero)
 
     switch(numero){
     case 1:
-        //posición
+        //posiciÃ³n
 
         cout << "+-------+" << endl;
         cout << "|       |" << endl;
@@ -646,7 +646,7 @@ int dibujos(int numero)
 }
 
 
-///ESTADÍSTICAS ====================================
+///ESTADÃSTICAS ====================================
 
 void estadisticas(string vecGanador[], int, int vecPuntaje[], int)
 {
@@ -657,7 +657,7 @@ void estadisticas(string vecGanador[], int, int vecPuntaje[], int)
     system("cls");
     system("color 47");
 
-    cout << "**********ESTADÍSTICAS**********" << endl;
+    cout << "**********ESTADÃSTICAS**********" << endl;
 
 
     for(x=0; x<10; x++){
@@ -678,17 +678,14 @@ void estadisticas(string vecGanador[], int, int vecPuntaje[], int)
 }
 
 
-///CRÉDITOS =======================================
+///CRÃ‰DITOS =======================================
 void creditos()
 {
     system("cls");
     system("color 61");
-    cout << "*******************CRÉDITOS*******************" << endl << endl << endl << endl;
+    cout << "*******************CRÃ‰DITOS*******************" << endl << endl << endl << endl;
 
-    cout << "Pablo Andrés Magnavachi           Legajo 25988" << endl;
-    cout << "Marcos Luciano Labat              Legajo 25970" << endl;
-    cout << "Paula Andrea Torres               Legajo 26330" << endl;
-    cout << "Juan Facundo Tam                  Legajo 26812" << endl;
+    cout << "Juan Facundo Tam" << endl;
 
     cout << endl << endl << endl;
 
@@ -705,45 +702,45 @@ void reglas()
     cout << "Gran Cerdo es un juego de dados de dos jugadores en el que intervienen el" << endl;
     cout << "azar y la codicia. El objetivo general del juego es sumar la mayor cantidad" << endl;
     cout << "de puntos de victoria en un total de 5 rondas. La suma de puntaje depende de" << endl;
-    cout << "diferentes situaciones que se pueden dar en el juego y que más adelante se" << endl;
-    cout << "explicarán." << endl << endl;
+    cout << "diferentes situaciones que se pueden dar en el juego y que mÃ¡s adelante se" << endl;
+    cout << "explicarÃ¡n." << endl << endl;
 
     cout << "Se juega con dos o tres dados de seis caras por cada jugador. Antes de" << endl;
-    cout << "comenzar, se debe determinar cuál de los dos jugadores empieza. Para ello" << endl;
+    cout << "comenzar, se debe determinar cuÃ¡l de los dos jugadores empieza. Para ello" << endl;
     cout << "se lanzan dos dados y el jugador que haya obtenido el mayor puntaje" << endl;
     cout << "comienza. Si empatan en el puntaje, comienza el jugador que haya obtenido" << endl;
-    cout << "el dado más alto. Si empatan nuevamente vuelven a lanzar ambos dados" << endl;
+    cout << "el dado mÃ¡s alto. Si empatan nuevamente vuelven a lanzar ambos dados" << endl;
     cout << "otra vez." << endl << endl;
 
-    cout << "El juego está compuesto por cinco rondas por jugador y en cada ronda el" << endl;
+    cout << "El juego estÃ¡ compuesto por cinco rondas por jugador y en cada ronda el" << endl;
     cout << "jugador dispone de ilimitados lanzamientos.En cada lanzamiento el jugador" << endl;
     cout << "tira los dados y se analiza los valores de las caras:" << endl << endl;
 
-    cout << "* Si las caras son distintas entre sí y ninguna de ellas es un as. Entonces" << endl;
-    cout << "  el cerdo acumula trufas según la suma de las caras al total de la ronda." << endl;
+    cout << "* Si las caras son distintas entre sÃ­ y ninguna de ellas es un as. Entonces" << endl;
+    cout << "  el cerdo acumula trufas segÃºn la suma de las caras al total de la ronda." << endl;
     cout << "  Por ejemplo: 5 y 3, acumula 8 trufas. Luego, puede decidir si volver a" << endl;
     cout << "  lanzar los dados o plantarse y ceder el turno al otro cerdo." << endl << endl;
 
-    cout << "* Si las caras son iguales entre sí y no son ases. Entonces el cerdo hizo un" << endl;
+    cout << "* Si las caras son iguales entre sÃ­ y no son ases. Entonces el cerdo hizo un" << endl;
     cout << "  Oink y acumula trufas por el doble de la suma de las caras al total de la" << endl;
-    cout << "  ronda. Por ejemplo: 4 y 4, acumula 16 trufas. También, está obligado a" << endl;
-    cout << "  lanzar los dados una vez más." << endl << endl;
+    cout << "  ronda. Por ejemplo: 4 y 4, acumula 16 trufas. TambiÃ©n, estÃ¡ obligado a" << endl;
+    cout << "  lanzar los dados una vez mÃ¡s." << endl << endl;
 
-    cout << "* Si las caras son distintas entre sí y hay un as entre ellas. Pierde todas" << endl;
-    cout << "  las trufas que venía acumulando en la ronda actual y automáticamente" << endl;
+    cout << "* Si las caras son distintas entre sÃ­ y hay un as entre ellas. Pierde todas" << endl;
+    cout << "  las trufas que venÃ­a acumulando en la ronda actual y automÃ¡ticamente" << endl;
     cout << "  le cede el turno al otro cerdo." << endl << endl;
 
-    cout << "* Si dos de las caras son iguales entre sí y son ases. El cerdo se hunde en" << endl;
-    cout << "  el barro y pierde todas las trufas que venía acumulando en las rondas" << endl;
-    cout << "  anteriores y automáticamente le cede el turno al otro cerdo." << endl << endl;
+    cout << "* Si dos de las caras son iguales entre sÃ­ y son ases. El cerdo se hunde en" << endl;
+    cout << "  el barro y pierde todas las trufas que venÃ­a acumulando en las rondas" << endl;
+    cout << "  anteriores y automÃ¡ticamente le cede el turno al otro cerdo." << endl << endl;
 
-    cout << "* Si se está lanzando con tres dados y tres de las caras son iguales entre sí" << endl;
+    cout << "* Si se estÃ¡ lanzando con tres dados y tres de las caras son iguales entre sÃ­" << endl;
     cout << "  y son ases. Aplica la misma quita de puntos que en el caso anterior pero" << endl;
     cout << "  dichos puntos se acumulan al otro cerdo en dicha ronda." << endl << endl;
 
 
     cout << "* El juego utiliza dos dados hasta que ambos cerdos superen (cada uno) las 50" << endl;
-    cout << "  trufas o alguno de ellos se hunda en el barro. A partir de allí, el juego se" << endl;
+    cout << "  trufas o alguno de ellos se hunda en el barro. A partir de allÃ­, el juego se" << endl;
     cout << "  desarrolla contres dados por lanzamiento (esto puede ocurrir incluso en el" << endl;
     cout << "  transcurso de una ronda)." << endl << endl;
 
@@ -752,7 +749,7 @@ void reglas()
 
     cout << "Hito - Puntos de victoria" << endl;
     cout << "-----------------------------------------------------------------" << endl;
-    cout << "- Más trufas en total 5 PDV" << endl;
+    cout << "- MÃ¡s trufas en total 5 PDV" << endl;
     cout << "- Cada 50 trufas 1 PDV" << endl;
     cout << "- Oink 2 PDV * Cantidad de Oinks" << endl;
     cout << "- Cerdo codicioso (ronda con mayor cantidad de lanzamientos) 3 PDV" << endl;
